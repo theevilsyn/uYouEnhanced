@@ -63,7 +63,8 @@ jobs:
         uses: actions/checkout@v5
         with:
           path: main
-          ref: ${{ github.event.inputs.commit_id || github.ref }}
+          # ref: ${{ github.event.inputs.commit_id || github.ref }}
+          ref: refs/tags/v20.05.4-3.0.4
           submodules: recursive
 
       - name: Install Dependencies
